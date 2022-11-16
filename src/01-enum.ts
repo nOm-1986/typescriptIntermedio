@@ -1,23 +1,23 @@
-(()=> {
+
   type Hobby = 'Reading' | 'Writing' | 'Speaking';
 
-  enum ROLES {
+  export enum ROLES {
     ADMIN = 'admin',
     SELLER = 'seller',
     CUSTOMER = 'customer'
   }
 
-  type User = {
+  export type User = {
     username: string,
     role: ROLES,
-    hobby: Hobby
+    //hobby: Hobby
   }
 
-  const nicoUer: User = {
+  const faboUser: User = {
     username: 'faBelMe',
     role: ROLES.ADMIN,
-    hobby: 'Speaking'
+    //hobby: 'Speaking'
   }
+  //console.log(faboUser);
 
 
-})();

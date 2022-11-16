@@ -24,11 +24,4 @@ console.log(porDefecto('uno'));
 console.log(porDefecto('uno',50));
 console.log(porDefecto('uno',70,'cambio'));
 
-function getPerson(
-  { name = 'Tom', age }: { name?: string; age: number }
-) {
-  console.log(name, age);
-}
-
-getPerson({age:50});
 
