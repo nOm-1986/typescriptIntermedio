@@ -26,6 +26,12 @@ console.log(rtaArray);
  * En este caso nosotros sabemos que puede haber un string o un array.
  * pero en rtaArray no puedo ingresar directamente a las funciones de array.
  * rtaArray.pop(), por ende debo hacer un if para validar
+ * Tendría que hacer una assertion de tipo, pero typescript no puede
+ * inferir la lógica.
+ * if(Array.isArray(rtaArray)){
+ *  rtaArray.revers();
+ * }
+ * Pero antes no lo podría utilizar
  *
  * Lo mismo me va a pasar con mi string.
  * rtaString.toUpperCase().
