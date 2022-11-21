@@ -1,3 +1,5 @@
+import { Category } from "../categories/category.model";
+
 type Sizes = '16' | 'S' | 'M' | 'L' | 'XL';
 
 interface Product {
@@ -6,6 +8,7 @@ interface Product {
   createdAt: Date,
   stock: number,
   size?: Sizes;
+  category: Category
 }
 
 export { Sizes, Product}

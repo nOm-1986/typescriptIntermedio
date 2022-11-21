@@ -5,7 +5,11 @@ addProduct({
   title: 'first producto',
   createdAt: new Date(),
   stock: 50,
-  size: tShirtSize.SMALL
+  size: tShirtSize.SMALL,
+  category: {
+    id: 1,
+    name: 'Electrodomesticos'
+  }
 });
 
 console.log(products);
