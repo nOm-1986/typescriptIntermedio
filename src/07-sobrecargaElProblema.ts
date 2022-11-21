@@ -1,7 +1,7 @@
 /**
  * Sobrecarga de funciones - El problema
  *
- * La sobrecarga de funciones sobre esta disponible en POO y con la palabra reservada
+ * La sobrecarga de funciones solo esta disponible en POO y con la palabra reservada
  * function, no esta disponible con const mifun = () => {}
  *
  * Fabian => [F,a,b,i,a,n] => String => string[]
@@ -10,17 +10,17 @@
 
 function parseStr(input: string | string[]): string | string[] {
   if(Array.isArray(input)){
-    return input.join(''); //String
+    return input.join(''); //Retorna un String
   } else {
-    return input.split('');//string[]
+    return input.split('');//string[] returna un array
   }
 }
+const rtaString = parseStr(['F','a','b','i','a','n']);
+console.log(rtaString);
 
 const rtaArray = parseStr('Fabian');
 console.log(rtaArray);
 
-const rtaString = parseStr(['F','a','b','i','a','n']);
-console.log(rtaString);
 
 /**Qué problemas podemos tener con esto?
  * En este caso nosotros sabemos que puede haber un string o un array.
