@@ -2,13 +2,16 @@ import {addProduct, products} from './products/product.service';
 
 addProduct({
   id: 1,
-  title: 'first producto',
   createdAt: new Date(),
+  updatedAt: new Date(),
+  title: 'first producto',
   stock: 50,
   size: tShirtSize.SMALL,
   category: {
     id: 1,
-    name: 'Electrodomesticos'
+    name: 'Electrodomesticos',
+    createdAt: new Date(),
+    updatedAt: new Date()
   }
 });
 
