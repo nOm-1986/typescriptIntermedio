@@ -38,4 +38,9 @@ const readProduct = (id:string) => {
   //Code
 }
 
-export {products, addProduct}
+const findProducts = (id:string) : Product[] => {
+  //Filtering code.
+  return products;
+}
+
+export {products, addProduct, findProducts}
