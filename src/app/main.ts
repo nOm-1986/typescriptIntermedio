@@ -1,6 +1,7 @@
 import {faker} from '@faker-js/faker';
 import {addProduct, products, findProducts} from './products/product.service';
 
+
 for(let i = 0; i < 50; i++) {
   addProduct({
     description: faker.commerce.productDescription(),
