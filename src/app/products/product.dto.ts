@@ -8,3 +8,13 @@ export interface CreateProductDto extends Omit<Product, 'id' | 'createdAt' | 'up
 
 //Con pick en vez de omitir yo los escojo.
 type example = Pick<Product, 'color' | 'description'>;
+
+/*El Partial lo que hace es dejarme todos los campos como opcionales, stock?:
+export interface UpdateProductDto extends Partial<Product> {}*/
+
+//Pero que pasa si yo no deseo editar todos los campos, por ejemplo una vez creado el createdAt no se debería dejar modificar.
+//I can extend my interfaces from another dto, in this case we're going to extend from CreateProductDto.
+export interface UpdateProductDto extends Partial<CreateProductDto> {}
+
+//The oposite of Partial is Required who do that all information will be required.
+type example2 = Required<Product>

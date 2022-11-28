@@ -1,5 +1,5 @@
 import {faker} from '@faker-js/faker';
-import {addProduct, products, findProducts} from './products/product.service';
+import {addProduct, products, findProducts, updateProduct} from './products/product.service';
 
 
 for(let i = 0; i < 50; i++) {
@@ -19,5 +19,13 @@ for(let i = 0; i < 50; i++) {
 
 
 console.log(products);
+
+const product = products[0];
+updateProduct(product.id, {
+  title: 'New Title',
+  stock: 80
+});
+
+//Pero que pasa si yo no deseo editar todos los campos, por ejemplo una vez creado el createdAt no se debería dejar modificar.
 
 

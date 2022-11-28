@@ -5,7 +5,7 @@ import {faker} from '@faker-js/faker';
  */
 
 import { Product } from "./product.model";
-import { CreateProductDto } from "./product.dto";
+import { CreateProductDto, UpdateProductDto } from "./product.dto";
 
 const products: Product[] = [];
 
@@ -26,8 +26,15 @@ const addProduct = (data: CreateProductDto): Product => {
   return newProduct;
 }
 
-const updateProduct = (id: string, changes: Product) => {
-  //Code.
+const updateProduct = (id: string | number, changes: UpdateProductDto): Product => {
+  const index = products.findIndex(item => item.id === id);
+  const prevData = products[index];
+  //Esto es más de manipulación de arrays en memoria. Con BD esto casi no se utiliza.
+  products[index] = {
+    ...prevData,
+    ...changes
+  }
+  return products[index];
 }
 
 const deleteProduct = (id: string) => {
@@ -43,4 +50,4 @@ const findProducts = (id:string) : Product[] => {
   return products;
 }
 
-export {products, addProduct, findProducts}
+export {products, addProduct, findProducts, updateProduct}
