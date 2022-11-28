@@ -5,7 +5,7 @@ import {faker} from '@faker-js/faker';
  */
 
 import { Product } from "./product.model";
-import { CreateProductDto, UpdateProductDto } from "./product.dto";
+import { CreateProductDto, UpdateProductDto, FindPorductDto } from "./product.dto";
 
 const products: Product[] = [];
 
@@ -45,8 +45,9 @@ const readProduct = (id:string) => {
   //Code
 }
 
-const findProducts = (id:string) : Product[] => {
-  //Filtering code.
+const findProducts = (dto: FindPorductDto): Product[] => {
+  //Como es readonly no los puedo modificar, solo los puedo pasar como parámetro.
+  //dto.color = 'blue',//Esto ya no es posible.
   return products;
 }
 

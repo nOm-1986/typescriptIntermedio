@@ -17,4 +17,8 @@ export interface UpdateProductDto extends Partial<Product> {}*/
 export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 //The oposite of Partial is Required who do that all information will be required.
-type example2 = Required<Product>
+//type example2 = Required<Product>
+
+
+//Para que sean de solo lectura.
+export interface FindPorductDto extends Readonly<Partial<Product>> {}

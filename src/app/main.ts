@@ -26,6 +26,9 @@ updateProduct(product.id, {
   stock: 80
 });
 
-//Pero que pasa si yo no deseo editar todos los campos, por ejemplo una vez creado el createdAt no se debería dejar modificar.
+findProducts({
+  stock: 10,
+  color: 'red'
+});
 
 
